@@ -35,7 +35,7 @@ public class Lockscreen implements IXposedHookLoadPackage, IXposedHookZygoteInit
 
     @Override
     public void initZygote(StartupParam startupParam) throws Throwable {
-        prefs = new XSharedPreferences("com.lr.keyguarddisabler");
+        prefs = new XSharedPreferences("com.bang4l.hidelock");
         prefs.makeWorldReadable();
         lockScreenTimeoutToEnforce = Integer.parseInt(prefs.getString("lockscreentimeout", "1")) * 60 * 1000;
         LOG = prefs.getBoolean("logtofile", false);
